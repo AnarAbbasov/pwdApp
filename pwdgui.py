@@ -11,33 +11,16 @@ class pwdApp(tk.Tk):
         self.createWidgets()
     
     def createWidgets(self):
-        
-        
-        
-        
-        mainframe=tk.Frame(self,width=200,height=200)
-        unamef=tk.Entry(mainframe,)
-        unamef.pack(side='left')
-        pwdent=tk.Entry(mainframe,)
-        pwdent.pack(side='left')
-        savebutt=tk.Button(mainframe,text="save")
-        savebutt.pack()
-        self.title("password manager")
-        menubar = tk.Menu(mainframe)
-        mainmenu=tk.Menu(menubar,tearoff=0)
-        mainmenu.add_command(label="New",)
+        menubar = Menu(self)
         self.config(menu=menubar)
-        mainframe.pack()
+        file_menu = Menu(menubar)
+        file_menu.add_command(
+        label='Exit',
+        command=self.destroy,
+        )
         
-        searchframe=mainframe=tk.Frame(self,width=200,height=200)
-        searchbox=unamef=tk.Entry(searchframe,)
-        searchbox.pack(side='left')
-        searchbutt=tk.Button(searchframe,text="search")
-        searchbutt.pack()
-        savebutt.pack()
-        searchframe.pack(side="left")
         
-
+                                                                                                                                                                        
 if __name__ == "__main__":
     app = pwdApp()
     app.mainloop()

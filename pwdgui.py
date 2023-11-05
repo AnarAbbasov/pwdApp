@@ -11,6 +11,18 @@ class pwdApp(tk.Tk):
         self.createWidgets()
     
     def createWidgets(self):
+        menubar =tk.Menu(self)
+        self.config(menu=menubar)
+        file_menu = tk.Menu(menubar)
+        file_menu.add_command(
+                 label='DbSettings',
+                 command=self.destroy,
+                  )
+        menubar.add_cascade(
+        label="DbSettings",
+         menu=file_menu,
+         underline=0
+         )
         
         mainframe=tk.Frame(self,width=200,height=200)
         unamef=tk.Entry(mainframe,)

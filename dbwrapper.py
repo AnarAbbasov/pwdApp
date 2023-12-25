@@ -3,7 +3,7 @@ import pyodbc
 SERVER = '192.168.1.106'
 DATABASE = 'ProductionDB'
 USERNAME = 'sa'
-PASSWORD = 'Mazahir@2010'
+PASSWORD = ''
 
 connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD}; Encrypt=no'
 
